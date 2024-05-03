@@ -221,7 +221,7 @@ func makeEndpointStatusTable(statusList []epStatus) (hdr []string, rows [][]stri
 			status.Resp.StorageVersion,
 			humanize.Bytes(uint64(status.Resp.DbSize)),
 			humanize.Bytes(uint64(status.Resp.DbSizeInUse)),
-			fmt.Sprintf("%d%%", int(float64(100-(status.Resp.DbSizeInUse*100/status.Resp.DbSize)))) + "%",
+			fmt.Sprintf("%d%%", int(float64(100-(status.Resp.DbSizeInUse*100/status.Resp.DbSize)))),
 			humanize.Bytes(uint64(status.Resp.DbSizeQuota)),
 			fmt.Sprint(status.Resp.Leader == status.Resp.Header.MemberId),
 			fmt.Sprint(status.Resp.IsLearner),
