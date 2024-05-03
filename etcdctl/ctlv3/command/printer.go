@@ -211,7 +211,7 @@ func makeEndpointHealthTable(healthList []epHealth) (hdr []string, rows [][]stri
 }
 
 func makeEndpointStatusTable(statusList []epStatus) (hdr []string, rows [][]string) {
-	hdr = []string{"endpoint", "ID", "version", "storage version", "db size", "in use", "not in use", "quota", "is leader", "is learner", "raft term",
+	hdr = []string{"endpoint", "ID", "version", "storage version", "db size", "in use", "not in use", "is leader", "is learner", "raft term",
 		"raft index", "raft applied index", "errors"}
 	for _, status := range statusList {
 		rows = append(rows, []string{
